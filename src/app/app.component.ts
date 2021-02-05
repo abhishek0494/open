@@ -5,7 +5,10 @@ import { Component,AfterViewInit, ElementRef, HostListener, ViewChild } from '@a
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    this.navbar.nativeElement.className='toolbar-hide'
+  }
   title = 'open-financial';
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
   max=300000

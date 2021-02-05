@@ -1,4 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+nav[role="banner"] {
+    width: 100%;
+     
+    ul {
+      width:100%;
+      list-style:none;
+      display: flex;
+      flex-wrap: wrap;  
+      > li {
+        position:relative;
+        float:left;
+        flex-grow: 1;
+        min-width: 20%;
+        text-decoration: none;
+        &:hover {
+            > a {
+              color:#663399;
+            }
+        }
+    
+        > a {
+            text-align: left;
+            text-decoration: none;
+            font: normal normal normal 25px/34px Open Sans;
+            letter-spacing: 0px;
+            color: #222222;
+            opacity: 1;
+            button.navbar-btn{
+                position: absolute;
+                top: -2px;
+            }
+        }
+      }
+    }
+}
+body{
+    overflow-x: hidden;
+
+}
+.toolbar-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #FCFCFF;
+    font: normal normal normal 25pt/34pt Open Sans;
+    color: black;
+    z-index: 10;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+
+  }
+  .toolbar-hide{
+      display: none;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    // background-color: #FCFCFF;
+    font: normal normal normal 25pt/34pt Open Sans;
+    color: black;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
